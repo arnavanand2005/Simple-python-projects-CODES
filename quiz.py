@@ -14,31 +14,46 @@ options=(["A) function = myFunction()","B) def myFunction():","C) function myFun
 
 answers=("B","B","B","A","C")
 guesses=[]
-questionno=0
 score=0
+initialques=0
 
 for question in questions:
-    print("--------------------------")
-    print(question)
-    for option in options[questionno]:
-        print(option)
-
-    guess=input("ENTER YOUR GUESS (A/B/C/D) : ")
-    while guess.upper() not in ["A","B","C","D"]:
-        print("INVALID CHOICE SELECTED ")
         print()
-        guess=input("ENTER YOUR GUESS (A/B/C/D) : ")
-    guess=guess.upper()
-    guesses.append(guess)
-    if guess==answers[questionno]:
-        print("CORRECT ANSWER GUESSED ")
-        score+=1
-    else:
-        print("WRONG CHOICE SELECTED")
-        print(f"THE CORRECT ANSWER TO THE QUESTION WAS {answers[questionno]}")
+        print("----------------------------")
+        print()
+        print(question)
+        for option in options[initialques]:
+            print(option)
         
-    questionno+=1
-print()
+        guess=input("ENTER YOUR GUESS (A/B/C/D) : ")
+        while guess.upper() not in ["A","B","C","D"]:
+            print()
+            print("INVALID INPUT ENTERED")
+            guess=input("ENTER YOUR GUESS : ")
+        
+        guess=guess.upper()
+        guesses.append(guess)
 
-print(f"YOU SCORED {score} out of {len(questions)}")
-print("*-*-*-*----END OF QUIZ----*-*-*-*")
+        if guess==answers[initialques]:
+            print()
+            print("CORRECT ANSWER")
+            score+=1
+        else:
+            print()
+            print("INCORRECT ANSWER!!!")
+            print(F"CORRECT ANSWER WAS {answers[initialques]}")
+
+        initialques+=1
+print()
+print("-----------------------RESULT-----------------------")
+print(F"YOU SCORED {score} out of {len(answers)} MARKS")
+print("THE ANSWERS TO THE QUESTIONS WERE : ")
+for answer in answers:
+    print(answer,end=" ")
+print()
+print("YOUR GUESSES WERE : ")
+for guess in guesses:
+    print(guess,end=" ")
+print()
+print("-*-*-*-*-*-*-*-THANKS-FOR-PLAYING-*-*-*-*-*-*-*-")
+print() 
