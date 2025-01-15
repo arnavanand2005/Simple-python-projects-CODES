@@ -8,7 +8,7 @@ stand ={"Salad" : 400,
         "Hot dog" : 385,
         "Juice" : 250,
         "Energy drink" : 330,
-        "French fries" : 375
+        "French fries" : 525
         }
 
 order=[]
