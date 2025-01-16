@@ -26,7 +26,7 @@ def showbalance(balance):
     return balance
 
 balance=0
-is_running=True1
+is_running=True
 
 print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 string1="BANKKING PROGRAM"
