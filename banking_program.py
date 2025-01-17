@@ -2,7 +2,7 @@ def deposit(balance):
     amount=float(input("ENTER THE AMOUNT YOU WISH TO DEPOSIT : ₹"))
     balance+=amount
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
-    print(f"YOUR BALANCE IS {balance:0.2f}")
+    print(f"YOUR BALANCE IS ₹{balance:0.2f}")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n")
     return balance
 
@@ -14,14 +14,14 @@ def withdraw(balance):
 
     balance-=amount
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
-    print(f"YOUR BALANCE IS {balance:0.2f}")
+    print(f"YOUR BALANCE IS ₹{balance:0.2f}")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n")
     return balance
 
 
 def showbalance(balance):
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
-    print(f"YOUR BALNCE IS {balance:0.2f}")
+    print(f"YOUR BALNCE IS ₹{balance:0.2f}")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n")
     return balance
 
@@ -54,4 +54,3 @@ while is_running:
         break
     else:
         print("\n-----------INVALID INPUT------------\n")
-
